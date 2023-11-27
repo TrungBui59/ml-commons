@@ -20,6 +20,7 @@ public enum FunctionName {
     SPARSE_ENCODING,
     SPARSE_TOKENIZE,
     METRICS_CORRELATION,
+    QUESTION_ANSWER,
     REMOTE;
 
     public static FunctionName from(String value) {
@@ -35,7 +36,8 @@ public enum FunctionName {
      * @return true for deep learning model.
      */
     public static boolean isDLModel(FunctionName functionName) {
-        if (functionName == TEXT_EMBEDDING || functionName == SPARSE_ENCODING || functionName == SPARSE_TOKENIZE) {
+        if (functionName == TEXT_EMBEDDING || functionName == SPARSE_ENCODING ||
+            functionName == SPARSE_TOKENIZE || functionName == QUESTION_ANSWER) {
             return true;
         }
         return false;
