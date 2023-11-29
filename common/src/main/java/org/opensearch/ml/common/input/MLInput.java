@@ -56,6 +56,11 @@ public class MLInput implements Input {
     // Input text sentences for text embedding model
     public static final String TEXT_DOCS_FIELD = "text_docs";
 
+    // Input context docs for question answering model
+    public static final String CONTEXT_DOCS = "context_docs";
+    // Input list of questions for question answering model
+    public static final String QUESTIONS_LIST = "questions_list";
+
     // Algorithm name
     protected FunctionName algorithm;
     // ML algorithm parameters
