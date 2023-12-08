@@ -9,7 +9,7 @@ plugins {
     id 'java'
     id 'jacoco'
     id "io.freefair.lombok"
-    id 'com.diffplug.spotless' version '6.18.0'
+    id 'com.diffplug.spotless' version '6.23.0'
 }
 
 repositories {
@@ -68,11 +68,12 @@ dependencies {
 }
 
 lombok {
-    version = "1.18.28"
+    version = "1.18.30"
 }
 
 configurations.all {
     resolutionStrategy.force 'com.google.protobuf:protobuf-java:3.21.9'
+    resolutionStrategy.force 'org.apache.commons:commons-compress:1.25.0'
 }
 
 jacocoTestReport {
